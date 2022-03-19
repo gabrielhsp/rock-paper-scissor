@@ -11,6 +11,7 @@
 		9B8D763727E66CB500689BB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D763627E66CB500689BB6 /* ContentView.swift */; };
 		9B8D763927E66CB800689BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8D763827E66CB800689BB6 /* Assets.xcassets */; };
 		9B8D763C27E66CB800689BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8D763B27E66CB800689BB6 /* Preview Assets.xcassets */; };
+		9B8D764427E66F0400689BB6 /* GameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D764327E66F0400689BB6 /* GameOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		9B8D763627E66CB500689BB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9B8D763827E66CB800689BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B8D763B27E66CB800689BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9B8D764327E66F0400689BB6 /* GameOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		9B8D763327E66CB500689BB6 /* RockPaperScissor */ = {
 			isa = PBXGroup;
 			children = (
+				9B8D764227E66EFB00689BB6 /* Enumerators */,
 				9B8D763427E66CB500689BB6 /* RockPaperScissorApp.swift */,
 				9B8D763627E66CB500689BB6 /* ContentView.swift */,
 				9B8D763827E66CB800689BB6 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				9B8D763B27E66CB800689BB6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9B8D764227E66EFB00689BB6 /* Enumerators */ = {
+			isa = PBXGroup;
+			children = (
+				9B8D764327E66F0400689BB6 /* GameOptions.swift */,
+			);
+			path = Enumerators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8D764427E66F0400689BB6 /* GameOptions.swift in Sources */,
 				9B8D763727E66CB500689BB6 /* ContentView.swift in Sources */,
 				9B8D763527E66CB500689BB6 /* RockPaperScissorApp.swift in Sources */,
 			);
