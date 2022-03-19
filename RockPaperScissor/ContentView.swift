@@ -17,8 +17,20 @@ struct ContentView: View {
     
     // MARK: - UI Components
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HStack(spacing: 24) {
+            ForEach(0..<gameOptions.count) { number in
+                Button {
+                    print(gameOptions[number].rawValue)
+                } label: {
+                    VStack(spacing: 8) {
+                        Text(gameOptions[number].emoji)
+                            .font(.system(size: 60))
+                        Text(gameOptions[number].rawValue)
+                            .font(.footnote)
+                    }
+                }
+            }
+        }
     }
 }
 
