@@ -13,6 +13,7 @@
 		9B8D763C27E66CB800689BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B8D763B27E66CB800689BB6 /* Preview Assets.xcassets */; };
 		9B8D764427E66F0400689BB6 /* GameOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D764327E66F0400689BB6 /* GameOptions.swift */; };
 		9B8D764727E797C800689BB6 /* GameOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D764627E797C800689BB6 /* GameOptionButton.swift */; };
+		9B8D764927E7A94700689BB6 /* GameScoreResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D764827E7A94700689BB6 /* GameScoreResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		9B8D763B27E66CB800689BB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B8D764327E66F0400689BB6 /* GameOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptions.swift; sourceTree = "<group>"; };
 		9B8D764627E797C800689BB6 /* GameOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionButton.swift; sourceTree = "<group>"; };
+		9B8D764827E7A94700689BB6 /* GameScoreResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScoreResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				9B8D764327E66F0400689BB6 /* GameOptions.swift */,
+				9B8D764827E7A94700689BB6 /* GameScoreResult.swift */,
 			);
 			path = Enumerators;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				9B8D764727E797C800689BB6 /* GameOptionButton.swift in Sources */,
 				9B8D764427E66F0400689BB6 /* GameOptions.swift in Sources */,
+				9B8D764927E7A94700689BB6 /* GameScoreResult.swift in Sources */,
 				9B8D763727E66CB500689BB6 /* ContentView.swift in Sources */,
 				9B8D763527E66CB500689BB6 /* RockPaperScissorApp.swift in Sources */,
 			);
