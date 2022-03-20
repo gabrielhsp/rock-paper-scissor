@@ -12,7 +12,7 @@ struct ContentView: View {
     @State private var gameScore: Int = 0
     @State private var gameAnswer: Int = Int.random(in: 0...2)
     @State private var willUserWinOrLose: Bool = Bool.random()
-    @State private var gameOptions: [GameOptions] = GameOptions.allCases.shuffled()
+    @State private var gameOptions: [GameOptions] = GameOptions.allCases
     
     // MARK: - UI Components
     var body: some View {
@@ -48,7 +48,6 @@ struct ContentView: View {
     // MARK: - Private Methods
     private func shuffleGame() {
         willUserWinOrLose.toggle()
-        gameOptions.shuffle()
         gameAnswer = Int.random(in: 0...2)
     }
     
