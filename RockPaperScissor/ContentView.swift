@@ -17,20 +17,27 @@ struct ContentView: View {
     
     // MARK: - UI Components
     var body: some View {
-        HStack(spacing: 24) {
-            ForEach(0..<gameOptions.count) { number in
-                Button {
-                    print(gameOptions[number].rawValue)
-                } label: {
-                    VStack(spacing: 8) {
-                        Text(gameOptions[number].emoji)
-                            .font(.system(size: 60))
-                        Text(gameOptions[number].rawValue)
-                            .font(.footnote)
+        VStack(spacing: 24) {
+            VStack {
+                Text("Rock, Paper or Scissor")
+                    .font(.largeTitle)
+                
+                Text("Choose the option that will make you \(getWinOrLoose()) the game")
+            }
+            
+            HStack(spacing: 24) {
+                ForEach(0..<gameOptions.count) { number in
+                    GameOptionButton(gameOption: gameOptions[number]) {
+                        print(gameOptions[number].rawValue)
                     }
                 }
             }
         }
+    }
+    
+    // MARK: - Private Methods
+    private func getWinOrLoose() -> String {
+        return willUserWinOrLose ? "win" : "loose"
     }
 }
 
