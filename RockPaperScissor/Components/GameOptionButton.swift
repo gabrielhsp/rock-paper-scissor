@@ -17,12 +17,12 @@ struct GameOptionButton: View {
                 Text(gameOption.emoji)
                     .font(.system(size: 40))
                 Text(gameOption.rawValue)
-                    .font(.subheadline)
+                    .font(.subheadline.bold())
                     .foregroundColor(.white)
             }
         })
-        .padding(24)
-        .background(.red)
+        .frame(minWidth: 90, minHeight: 120)
+        .background(Color(hex: "#e5359c"))
         .cornerRadius(8)
     }
 }

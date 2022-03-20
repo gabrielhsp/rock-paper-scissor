@@ -15,7 +15,7 @@ enum GameOptions: String, CaseIterable {
         case .rock:
             return "🪨"
         case .paper:
-            return "📄"
+            return "🔖"
         case .scissor:
             return "✂️"
         }

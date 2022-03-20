@@ -16,33 +16,38 @@ struct ContentView: View {
     
     // MARK: - UI Components
     var body: some View {
-        VStack(spacing: 24) {
-            VStack(alignment: .center) {
-                Text("Rock, Paper or Scissor")
-                    .font(.title.bold())
-                
-                Text("You need to **\(getWinOrLoose())** the game to increase your score:")
-                    .multilineTextAlignment(.center)
-            }
-            
-            VStack {
-                GameOptionButton(gameOption: gameOptions[gameAnswer]) {
+        ZStack {
+            VStack(spacing: 24) {
+                VStack(alignment: .center, spacing: 4) {
+                    Text("Rock, Paper or Scissor")
+                        .font(.title.bold())
+                        .foregroundColor(.white)
+                    
+                    Text("You need to **\(getWinOrLoose())** the game to increase your score:")
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(.white)
                 }
-            }
-            
-            HStack(spacing: 8) {
-                ForEach(0..<gameOptions.count) { number in
-                    GameOptionButton(gameOption: gameOptions[number]) {
-                        updateGameScore(userSelection: gameOptions[number])
+                .padding()
+                
+                GameSelectionOption(gameOption: gameOptions[gameAnswer])
+                
+                HStack(spacing: 8) {
+                    ForEach(0..<gameOptions.count) { number in
+                        GameOptionButton(gameOption: gameOptions[number]) {
+                            updateGameScore(userSelection: gameOptions[number])
+                        }
                     }
                 }
-            }
-            
-            VStack {
-                Text("Score: \(gameScore)")
-                    .font(.title.bold())
+                
+                VStack {
+                    Text("Score: \(gameScore)")
+                        .font(.title.bold())
+                        .foregroundColor(.white)
+                }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(hex: "#060a47"))
     }
     
     // MARK: - Private Methods
