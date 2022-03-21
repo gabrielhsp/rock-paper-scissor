@@ -52,6 +52,7 @@ struct ContentView: View {
                 }
             }
         }
+        .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hex: "#060a47"))
         .alert("The game has ended", isPresented: $showEndingGame) {
