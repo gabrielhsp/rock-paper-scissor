@@ -13,6 +13,11 @@ struct ContentView: View {
     @State private var gameAnswer: Int = Int.random(in: 0...2)
     @State private var willUserWinOrLose: Bool = Bool.random()
     @State private var gameOptions: [GameOptions] = GameOptions.allCases
+    @State private var userGameTries: Int = 0
+    @State private var showEndingGame: Bool = false
+    
+    // MARK: - Properties
+    private let maximumGameTries: Int = 8
     
     // MARK: - UI Components
     var body: some View {
@@ -48,12 +53,33 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(hex: "#060a47"))
+        .alert("The game has ended", isPresented: $showEndingGame) {
+            Button("Reset game", role: .cancel, action: resetGame)
+        } message : {
+            Text("Congratulations! You're final score is \(gameScore). Reset the game to play again.")
+        }
     }
     
     // MARK: - Private Methods
+    private func resetGame() {
+        gameScore = 0
+        userGameTries = 0
+        shuffleGame()
+    }
+    
     private func shuffleGame() {
         willUserWinOrLose.toggle()
         gameAnswer = Int.random(in: 0...2)
+    }
+    
+    private func shouldEndGame() {
+        userGameTries += 1
+        
+        if userGameTries == maximumGameTries {
+            showEndingGame = true
+        } else {
+            showEndingGame = false
+        }
     }
     
     private func getWinOrLoose() -> String {
@@ -71,6 +97,7 @@ struct ContentView: View {
             gameScore += 1
         }
         
+        shouldEndGame()
         shuffleGame()
     }
     
