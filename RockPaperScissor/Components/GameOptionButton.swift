@@ -21,7 +21,7 @@ struct GameOptionButton: View {
                     .foregroundColor(.white)
             }
         })
-        .frame(minWidth: 90, minHeight: 120)
+        .frame(maxWidth: .infinity, minHeight: 120)
         .background(Color(hex: "#e5359c"))
         .cornerRadius(8)
     }
