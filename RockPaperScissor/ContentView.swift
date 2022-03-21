@@ -76,12 +76,7 @@ struct ContentView: View {
     
     private func shouldEndGame() {
         userGameTries += 1
-        
-        if userGameTries == maximumGameTries {
-            showEndingGame = true
-        } else {
-            showEndingGame = false
-        }
+        showEndingGame = (userGameTries == maximumGameTries ? true : false)
     }
     
     private func getWinOrLoose() -> String {
