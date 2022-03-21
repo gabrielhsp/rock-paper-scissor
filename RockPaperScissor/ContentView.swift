@@ -22,8 +22,8 @@ struct ContentView: View {
     // MARK: - UI Components
     var body: some View {
         ZStack {
-            VStack(spacing: 24) {
-                VStack(alignment: .center, spacing: 4) {
+            VStack(spacing: Constants.Spaces.large.rawValue) {
+                VStack(alignment: .center, spacing: Constants.Spaces.extraSmall.rawValue) {
                     Text("Rock, Paper or Scissor")
                         .font(.title.bold())
                         .foregroundColor(.white)
@@ -36,7 +36,7 @@ struct ContentView: View {
                 
                 GameSelectionOption(gameOption: gameOptions[gameAnswer])
                 
-                HStack(spacing: 8) {
+                HStack(spacing: Constants.Spaces.small.rawValue) {
                     ForEach(0..<gameOptions.count) { number in
                         GameOptionButton(gameOption: gameOptions[number]) {
                             updateGameScore(userSelection: gameOptions[number])
@@ -54,7 +54,7 @@ struct ContentView: View {
         }
         .preferredColorScheme(.dark)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(hex: "#060a47"))
+        .background(Constants.Colors.darkBlue)
         .alert("The game has ended", isPresented: $showEndingGame) {
             Button("Reset game", role: .cancel, action: resetGame)
         } message : {

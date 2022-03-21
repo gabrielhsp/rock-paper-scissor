@@ -13,7 +13,7 @@ struct GameOptionButton: View {
     
     var body: some View {
         Button(action: action, label: {
-            VStack(alignment: .center, spacing: 8) {
+            VStack(alignment: .center, spacing: Constants.Spaces.small.rawValue) {
                 Text(gameOption.emoji)
                     .font(.system(size: 40))
                 Text(gameOption.rawValue)
@@ -22,7 +22,7 @@ struct GameOptionButton: View {
             }
         })
         .frame(maxWidth: .infinity, minHeight: 120)
-        .background(Color(hex: "#e5359c"))
+        .background(Constants.Colors.darkPink)
         .cornerRadius(8)
     }
 }

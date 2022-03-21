@@ -13,7 +13,7 @@ struct GameSelectionOption: View {
     
     // MARK: - UI Components
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: Constants.Spaces.small.rawValue) {
             Text(gameOption.emoji)
                 .font(.system(size: 40))
             
@@ -22,7 +22,7 @@ struct GameSelectionOption: View {
                 .foregroundColor(.white)
         }
         .padding(44)
-        .background(Color(hex: "#2eb2f7"))
+        .background(Constants.Colors.lightBlue)
         .clipShape(Circle())
     }
 }
